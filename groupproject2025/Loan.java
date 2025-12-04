@@ -1,13 +1,13 @@
 package groupproject2025;
 
-public class LoanTemplate {
+public class Loan {
     private double annualInterestRate;
     private int numberOfYears;
     private double loanAmount;
     private java.util.Date loanDate;
 
     /** No-arg constructor */
-    public LoanTemplate() {
+    public Loan() {
         this(2.5, 1, 1000);
     }
 
@@ -15,7 +15,7 @@ public class LoanTemplate {
      * Construct a loan with specified annual interest rate,
      * number of years, and loan amount
      */
-    public LoanTemplate(double annualInterestRate, int numberOfYears,
+    public Loan(double annualInterestRate, int numberOfYears,
             double loanAmount) {
         this.annualInterestRate = annualInterestRate;
         this.numberOfYears = numberOfYears;

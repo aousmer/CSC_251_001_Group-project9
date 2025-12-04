@@ -2,7 +2,7 @@ package groupproject2025;
 
 import java.util.Scanner;
 
-public class TestLoanClassTemplate {
+public class TestLoanClass {
     /** Main method */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -24,7 +24,7 @@ public class TestLoanClassTemplate {
         double extraPaymentAmount = input.nextDouble();
 
         // Create Loan object
-        LoanTemplate loan = new LoanTemplate(annualInterestRate, numberOfYears, loanAmount);
+        Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
 
         // Display loan date, monthly payment, total payment, and total interest
         System.out.printf("The loan was created on %s%n" +
@@ -40,7 +40,7 @@ public class TestLoanClassTemplate {
     }
 
     /** Extra payment first month only */
-    public static void extraPayFirstMonth(LoanTemplate l, double extraPay) {
+    public static void extraPayFirstMonth(Loan l, double extraPay) {
         System.out.printf("Extra payment only first month $%.2f%n", extraPay);
         double myLoanAmount = l.getLoanAmount();
         double myMonthlyInterestRate = l.getAnnualInterestRate() / 1200;
@@ -75,7 +75,7 @@ public class TestLoanClassTemplate {
     }
 
     /** Extra payment every month */
-    public static void extraPayEveryMonth(LoanTemplate l, double extraPay) {
+    public static void extraPayEveryMonth(Loan l, double extraPay) {
         System.out.printf("Extra payment every month $%.2f%n", extraPay);
         double myLoanAmount = l.getLoanAmount();
         double myMonthlyInterestRate = l.getAnnualInterestRate() / 1200;
